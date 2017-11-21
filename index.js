@@ -134,7 +134,7 @@ function drawPoints(pointData) {
         .attr('id', function (d) {
             return d.name;
         })
-        .attr('fill', "darkgreen")
+        .attr('fill', "lightgreen")
         .attr('x', function (d) {
             return scaleX(d.name);
         })
@@ -158,10 +158,10 @@ function drawPoints(pointData) {
             svg2.selectAll('#' + currentID).attr('fill', 'orange')
         })
         .on('mouseout', function (d) {
-            d3.select(this).attr('fill', 'darkgreen');
+            d3.select(this).attr('fill', 'lightgreen');
 
             currentID = d3.select(this).attr('id');
-            svg2.selectAll('#' + currentID).attr('fill', 'darkgreen')
+            svg2.selectAll('#' + currentID).attr('fill', 'lightgreen')
         });
 
 
@@ -203,7 +203,7 @@ function drawPoints(pointData) {
         .append('rect')
         .attr('class','bars')
         .attr('id', function(d){return d.name;})
-        .attr('fill', "darkgreen")
+        .attr('fill', "lightgreen")
         .attr('x',function(d){
             return scaleX(d.name);
         })
@@ -227,10 +227,10 @@ function drawPoints(pointData) {
             svg.selectAll('#' + currentID).attr('fill','orange')
         })
         .on('mouseout', function(d){
-            d3.select(this).attr('fill','darkgreen');
+            d3.select(this).attr('fill','lightgreen');
 
             currentID = d3.select(this).attr('id');
-            svg.selectAll('#' + currentID).attr('fill','darkgreen')
+            svg.selectAll('#' + currentID).attr('fill','lightgreen')
         });
     $('[data-toggle="tooltip"]').tooltip();
 }
@@ -248,3 +248,6 @@ function sliderMoved(value){
     drawPoints(newData);
 
 }
+
+
+
